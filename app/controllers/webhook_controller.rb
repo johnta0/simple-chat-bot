@@ -34,7 +34,7 @@ class WebhookController < ApplicationController
               {
                 "type": "uri",
                 "label": "登録に進む",
-                "uri": "https://easy-diary.herokuapp.com/users/sign_up"
+                "uri": "https://easy-chat-diary.herokuapp.com/users/sign_up"
               }
             ],
             "title": "はじめまして！",
@@ -252,7 +252,7 @@ class WebhookController < ApplicationController
                         {
                           "type": "uri",
                           "label": "日記を見る",
-                          "uri": "https://easy-diary.herokuapp.com/"
+                          "uri": "https://easy-chat-diary.herokuapp.com/"
                         }
                       ],
                       "title": "日記の投稿が完了しました！",
