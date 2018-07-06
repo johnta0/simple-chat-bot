@@ -50,7 +50,7 @@ class WebhookController < ApplicationController
 
           now = Time.now.to_time_of_day #現在時刻
 
-          if diary = Diary.where(user_id: user.id, created_at: Time.zone.now.all_day, end: false).present?
+          if diary = Diary.where(user_id: user.id, created_at: Time.zone.now.all_day, end: false).present? && !event["postback"]["data"].match(/^Impressive/)
             simple_message("すでに選択肢を選んでいます。取り消す場合は、「リセット」と入力してください。", event)
             return
           elsif Diary.where(user_id: user.id, created_at: Time.zone.now.all_day, end: true).present? # すでに今日に日記を登録している
