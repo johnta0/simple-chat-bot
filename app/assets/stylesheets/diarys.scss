@@ -1,0 +1,166 @@
+// プロフィール画像を丸く切り抜く
+.trim-image-to-circle {
+  width:  50px;
+  height: 50px;
+  border-radius: 50%;
+  background-position: center center;
+  display: inline-block;
+  background-repeat: no-repeat;
+  object-fit: cover;
+}
+
+.diary_index {
+  margin: 20px 0;
+  border: solid 1px rgb(210, 210, 210);
+  border-radius: 4px;
+  padding: 0 10px;
+
+  &--title {
+    padding: 15px 0 10px;
+
+    img {
+      align: middle;
+    }
+
+    span {
+      font-size: 22px;
+      padding-left: 10px;
+    }
+  }
+
+  &--content {
+    margin: 15px 0;
+
+    &--item {
+      margin: 5px 0;
+      border: solid 1px rgb(210, 210, 210);
+      border-radius: 3px;
+      padding: 10px;
+
+      * { vertical-align: middle; }
+
+      &--sun {
+        color: $Orange;
+        font-size: 26px;
+      }
+
+      &--cloud {
+        color: gray;
+        font-size: 24px;
+      }
+
+      &--umbrella {
+        color: blue;
+        font-size: 25px;
+      }
+
+      &--question {
+        color: black;
+        font-size: 26px;
+        margin: 0 5px 0 3px;
+      }
+
+      &--date {
+        padding-left: 5px;
+        font-size: 18px;
+      }
+
+      &--score {
+        font-size: 20px;
+        padding-left: 5px;
+      }
+
+      &--none_score {
+        font-size: 18px;
+        padding-left: 2px;
+      }
+
+      &--button {
+        float: right;
+      }
+    }
+  }
+}
+
+.diary_show {
+  margin: 20px 0;
+  border: solid 1px rgb(210, 210, 210);
+  border-radius: 4px;
+  padding: 0 10px;
+
+  &--title {
+    padding: 15px 5px 0;
+    font-size: 20px;
+  }
+
+  &--content {
+    padding: 20px 10px;
+    max-width: 450px;
+    margin: 15px auto;
+    text-align: right;
+    font-size: 14px;
+    background: #7da4cd;
+
+    &--left_chat {
+      width: 100%;
+      margin: 10px 0;
+      overflow: hidden;
+      text-align: left;
+
+      & p {
+        display: inline-block;
+        position: relative;
+        margin: 0 0 0 10px;
+        padding: 10px;
+        max-width: 80%;
+        border-radius: 12px;
+        background: #edf1ee;
+      }
+
+      :after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: 3px;
+        left: -19px;
+        border: 8px solid transparent;
+        border-right: 18px solid #edf1ee;
+        -ms-transform: rotate(35deg);
+        -webkit-transform: rotate(35deg);
+        transform: rotate(35deg);
+      }
+    }
+
+    &--right_chat {
+      margin: 10px 0;
+
+      & p {
+        display: inline-block;
+        position: relative;
+        margin: 0 10px 0 0;
+        padding: 10px;
+        max-width: 80%;
+        border-radius: 12px;
+        background: #30e852;
+        font-size: 14px;
+        text-align: left;
+      }
+
+      :after {
+        content: "";
+        position: absolute;
+        top: 3px;
+        right: -19px;
+        border: 8px solid transparent;
+        border-left: 18px solid #30e852;
+        -ms-transform: rotate(-35deg);
+        -webkit-transform: rotate(-35deg);
+        transform: rotate(-35deg);
+      }
+    }
+  }
+
+  &--button {
+    margin-bottom: 10px;
+  }
+}

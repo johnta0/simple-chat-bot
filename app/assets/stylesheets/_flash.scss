@@ -1,0 +1,12 @@
+.flash {
+  color: $White;
+  text-align: center;
+  font-size: 18px;
+  padding: 2px 0;
+  &__alert{
+    background-color: crimson;
+  }
+  &__notice {
+    background-color: $Line;
+  }
+}
